@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Mandila | The Strategic Importance of the Homemaker</title>
+    <meta name="description"
+        content="Explore the strategic importance of the homemaker: economic value, child development, and social impact.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Team Mandila</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#economic">Economic Value</a></li>
+            <li><a href="#child-development">Child Development</a></li>
+            <li><a href="#social-impact">Social Impact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <header id="hero" class="hero">
+        <div class="hero-content">
+            <h1>The Invisible Backbone of Modern Society</h1>
+            <p class="subtitle">Unveiling the Strategic Importance of the Homemaker</p>
+            <a href="#economic" class="cta-button">Explore the Data</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </header>
+
+    <section id="economic" class="section">
+        <div class="container">
+            <h2 class="section-title">Economic Value</h2>
+            <p class="section-description">
+                Often overlooked in GDP calculations, the economic contribution of homemakers is immense. From childcare
+                to household management, the unpaid labor provided is a cornerstone of economic stability.
+            </p>
+            <div class="chart-container">
+                <canvas id="economicChart"></canvas>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>$1.5 Trillion</h3>
+                    <p>Estimated Annual Value of Unpaid Work in the US</p>
+                </div>
+                <div class="stat-card">
+                    <h3>11%</h3>
+                    <p>Potential GDP Increase if Accounted For</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="child-development" class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Child Development</h2>
+            <div class="content-split">
+                <div class="text-content">
+                    <p>
+                        The presence of a dedicated homemaker has profound effects on early childhood development.
+                        Consistent care leads to better emotional stability, higher academic achievement, and stronger
+                        social skills.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Enhanced emotional intelligence</li>
+                        <li>Improved academic performance</li>
+                        <li>Stronger family bonds</li>
+                    </ul>
+                </div>
+                <div class="visual-content">
+                    <!-- Placeholder for an image or graphic -->
+                    <div class="info-graphic">
+                        <div class="circle-stat">
+                            <span class="number">30%</span>
+                            <span class="label">Higher Literacy Rates</span>
+                        </div>
+                        <div class="circle-stat">
+                            <span class="number">40%</span>
+                            <span class="label">Lower Behavioral Issues</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="social-impact" class="section">
+        <div class="container">
+            <h2 class="section-title">Social Impact</h2>
+            <p class="section-description">
+                Beyond the home, homemakers act as the glue of the community. They volunteer, organize community events,
+                and foster social cohesion that paid services cannot replicate.
+            </p>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <h3>Community Cohesion</h3>
+                    <p>Building stronger neighborhoods through active participation and care.</p>
+                </div>
+                <div class="impact-card">
+                    <h3>Cultural Transmission</h3>
+                    <p>Preserving traditions and values for the next generation.</p>
+                </div>
+                <div class="impact-card">
+                    <h3>Social Safety Net</h3>
+                    <p> providing informal care for the elderly and sick, reducing burden on state systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="data-analytics" class="section dark-bg">
+        <div class="container">
+            <h2 class="section-title text-light">Data Analytics: The Cost of Departure (2015-2026)</h2>
+            <p class="section-description text-light">
+                Analyzing the hidden costs of the workforce shift. The data reveals significant impacts on personal
+                well-being, economic structure, and the next generation.
+            </p>
+            <div class="analytics-grid">
+                <div class="analytics-card">
+                    <h3>Burnout Rates</h3>
+                    <p class="stat-highlight">70% Higher</p>
+                    <div class="mini-chart-container">
+                        <canvas id="burnoutChart"></canvas>
+                    </div>
+                    <p class="card-caption">Increase in reported burnout among working mothers (2015-2026)</p>
+                </div>
+                <div class="analytics-card">
+                    <h3>Economic Value</h3>
+                    <p class="stat-highlight">$100k+</p>
+                    <div class="mini-chart-container">
+                        <canvas id="valueChart"></canvas>
+                    </div>
+                    <p class="card-caption">Annual replacement cost of a homemaker's labor</p>
+                </div>
+                <div class="analytics-card">
+                    <h3>Child Development</h3>
+                    <p class="stat-highlight">20-30% Gap</p>
+                    <div class="mini-chart-container">
+                        <canvas id="developmentChart"></canvas>
+                    </div>
+                    <p class="card-caption">Difference in developmental success metrics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14 Pillars of Leadership Section -->
+    <section id="pillars" class="pillars-section">
+        <div class="container">
+            <h2 class="section-title">14 Pillars of Leadership</h2>
+            <p class="section-description">
+                The strategic leadership role of the homemaker encompasses distinct pillars that form the foundation of
+                a
+                strong society. Click on a pillar to explore its impact.
+            </p>
+            <div class="pillars-grid">
+                <!-- Pillar 1 -->
+                <div class="pillar-card" data-topic="Economic Value"
+                    data-summary="The unpaid labor of homemakers contributes massively to the national economy, often exceeding the value of major industrial sectors."
+                    data-stat="$1.5 Trillion"
+                    data-stat-desc="Annual contribution to US GDP if unpaid household labor was monetized.">
+                    <div class="pillar-icon">💰</div>
+                    <h3>Economic Value</h3>
+                </div>
+                <!-- Pillar 2 -->
+                <div class="pillar-card" data-topic="Double Burden"
+                    data-summary="The 'Double Burden' refers to the dual responsibility of career and home management, often leading to significant stress and burnout."
+                    data-stat="14+ Hours"
+                    data-stat-desc="Average daily work hours for women balancing full-time employment and household duties.">
+                    <div class="pillar-icon">⚖️</div>
+                    <h3>Double Burden</h3>
+                </div>
+                <!-- Pillar 3 -->
+                <div class="pillar-card" data-topic="Political Impact"
+                    data-summary="Homemakers shape the political landscape by instilling civic values and fostering political awareness within the family unit."
+                    data-stat="60% of Values"
+                    data-stat-desc="Of political socialization occurs within the home environment during early childhood.">
+                    <div class="pillar-icon">🗳️</div>
+                    <h3>Political Impact</h3>
+                </div>
+                <!-- Pillar 4 -->
+                <div class="pillar-card" data-topic="Emotional Intelligence"
+                    data-summary="Consistent parental presence nurtures high emotional intelligence (EQ), a key predictor of future leadership success."
+                    data-stat="40% Reduction"
+                    data-stat-desc="In behavioral issues among children with a dedicated primary caregiver.">
+                    <div class="pillar-icon">🧠</div>
+                    <h3>Emotional Intelligence</h3>
+                </div>
+                <!-- Pillar 5 -->
+                <div class="pillar-card" data-topic="Crisis Management"
+                    data-summary="Homemakers are the first line of defense during family crises, managing financial downturns or health emergencies with resilience."
+                    data-stat="First Responders"
+                    data-stat-desc="Homemakers manage 80% of family health and emergency decisions.">
+                    <div class="pillar-icon">🛡️</div>
+                    <h3>Crisis Management</h3>
+                </div>
+                <!-- Pillar 6 -->
+                <div class="pillar-card" data-topic="Early Education"
+                    data-summary="The home is the first school. Active parental engagement in early literacy sets the trajectory for academic achievement."
+                    data-stat="1 Year Ahead"
+                    data-stat-desc="Children with active home schooling support are often a full grade level ahead by age 10.">
+                    <div class="pillar-icon">📚</div>
+                    <h3>Early Education</h3>
+                </div>
+                <!-- Pillar 7 -->
+                <div class="pillar-card" data-topic="Health & Nutrition"
+                    data-summary="Managing a family's diet and health regimens directly impacts long-term physical well-being and reduces healthcare costs."
+                    data-stat="25% Lower"
+                    data-stat-desc="Obesity rates in families that regularly eat home-cooked meals together.">
+                    <div class="pillar-icon">🍎</div>
+                    <h3>Health & Nutrition</h3>
+                </div>
+                <!-- Pillar 8 -->
+                <div class="pillar-card" data-topic="Community Building"
+                    data-summary="Homemakers are often the engine of local communities, organizing volunteers, events, and neighborhood watch programs."
+                    data-stat="2x More Likely"
+                    data-stat-desc="To volunteer in local community organizations compared to full-time workforce participants.">
+                    <div class="pillar-icon">🤝</div>
+                    <h3>Community Building</h3>
+                </div>
+                <!-- Pillar 9 -->
+                <div class="pillar-card" data-topic="Elderly Care"
+                    data-summary="Brief informal care provided by homemakers supports the aging population, alleviating immense pressure on state facilities."
+                    data-stat="$500 Billion"
+                    data-stat-desc="Estimated savings to the healthcare system annually due to informal family caregiving.">
+                    <div class="pillar-icon">👵</div>
+                    <h3>Elderly Care</h3>
+                </div>
+                <!-- Pillar 10 -->
+                <div class="pillar-card" data-topic="Sustainability"
+                    data-summary="Household management includes efficient resource use, waste reduction, and energy conservation, driving grassroots sustainability."
+                    data-stat="30% Less Waste"
+                    data-stat-desc="Generated by households with active management of recycling and consumption habits.">
+                    <div class="pillar-icon">🌱</div>
+                    <h3>Sustainability</h3>
+                </div>
+                <!-- Pillar 11 -->
+                <div class="pillar-card" data-topic="Cultural Roots"
+                    data-summary="The transmission of culture, language, and traditions occurs primarily within the home, preserving identity for future generations."
+                    data-stat="100% Critical"
+                    data-stat-desc="For the survival of minority languages and cultural practices.">
+                    <div class="pillar-icon">🏛️</div>
+                    <h3>Cultural Roots</h3>
+                </div>
+                <!-- Pillar 12 -->
+                <div class="pillar-card" data-topic="Conflict Resolution"
+                    data-summary="Mediating sibling rivalries and family disputes teaches essential negotiation and diplomacy skills."
+                    data-stat="Skill Transfer"
+                    data-stat-desc="These conflict resolution skills are directly applicable to corporate and political leadership.">
+                    <div class="pillar-icon">⚖️</div>
+                    <h3>Conflict Resolution</h3>
+                </div>
+                <!-- Pillar 13 -->
+                <div class="pillar-card" data-topic="Logistics"
+                    data-summary="Coordinating schedules, transport, and supplies for a multi-person household requires advanced logistical planning capabilities."
+                    data-stat="Project Mgmt"
+                    data-stat-desc="The complexity of managing a 4-person household equals that of a small business operation.">
+                    <div class="pillar-icon">🚚</div>
+                    <h3>Logistics</h3>
+                </div>
+                <!-- Pillar 14 -->
+                <div class="pillar-card" data-topic="Social Safety"
+                    data-summary="Homemakers provide the ultimate safety net during times of unemployment or societal instability, maintaining family structure."
+                    data-stat="Stability Anchor"
+                    data-stat-desc="Families with a homemaker recover 40% faster from external economic shocks.">
+                    <div class="pillar-icon">⚓</div>
+                    <h3>Social Safety</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Structure -->
+    <div id="pillarModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Topic Title</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p id="modalSummary" class="modal-summary">Summary text goes here...</p>
+                <div class="modal-stat-box">
+                    <div id="modalStat" class="modal-stat-number">STAT</div>
+                    <div id="modalStatDesc" class="modal-stat-desc">Description of the statistic.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Meet the Team Section -->
+    <section id="team" class="section team-section">
+        <div class="container">
+            <h2 class="section-title">Our Debate Team Leaders</h2>
+            <p class="section-description">
+                The voices behind the vision. 14 speakers, 14 pillars, one unified message.
+            </p>
+            <div class="team-grid">
+                <!-- Team Leader -->
+                <div class="team-card">
+                    <div class="photo-placeholder">
+                        <span>📷</span>
+                    </div>
+                    <h3>Mandila</h3>
+                    <p class="role">Team Leader</p>
+                    <p class="specialty">Introduction</p>
+                </div>
+                <!-- Aathif -->
+                <div class="team-card">
+                    <div class="photo-placeholder"></div>
+                    <h3>Aathif</h3>
+                    <p class="role">Economic Strategist</p>
+                </div>
+                <!-- Adheeb -->
+                <div class="team-card">
+                    <div class="photo-placeholder"></div>
+                    <h3>Adheeb</h3>
+                    <p class="role">Child Development Specialist</p>
+                </div>
+                <!-- Dahami -->
+                <div class="team-card">
+                    <div class="photo-placeholder"></div>
+                    <h3>Dahami</h3>
+                    <p class="role">Mental Health Advocate</p>
+                </div>
+                <!-- Kavindya -->
+                <div class="team-card">
+                    <div class="photo-placeholder"></div>
+                    <h3>Kavindya</h3>
+                    <p class="role">Health & Nutrition Expert</p>
+                </div>
+                <!-- Khaliq -->
+                <div class="team-card">
+                    <div class="photo-placeholder"></div>
+                    <h3>Khaliq</h3>
+                    <p class="role">Cultural Guardian</p>
+                </div>
+                <!-- Lahiru -->
+                <div class="team-card">
+                    <div class="photo-placeholder"></div>
+                    <h3>Lahiru</h3>
+                    <p class="role">Elderly Care Coordinator</p>
+                </div>
+                <!-- Oshadi -->
+                <div class="team-card">
+                    <div class="photo-placeholder"></div>
+                    <h3>Oshadi</h3>
+                    <p class="role">Logistics Manager</p>
+                </div>
+                <!-- Pawan -->
+                <div class="team-card">
+                    <div class="photo-placeholder"></div>
+                    <h3>Pawan</h3>
+                    <p class="role">Social Capital Specialist</p>
+                </div>
+                <!-- Raini -->
+                <div class="team-card">
+                    <div class="photo-placeholder"></div>
+                    <h3>Raini</h3>
+                    <p class="role">Conflict Resolution Mediator</p>
+                </div>
+                <!-- Sharuk -->
+                <div class="team-card">
+                    <div class="photo-placeholder"></div>
+                    <h3>Sharuk</h3>
+                    <p class="role">Skill Resilience Coach</p>
+                </div>
+                <!-- Vihara -->
+                <div class="team-card">
+                    <div class="photo-placeholder"></div>
+                    <h3>Vihara</h3>
+                    <p class="role">Political Impact Analyst</p>
+                </div>
+                <!-- Bhagya -->
+                <div class="team-card">
+                    <div class="photo-placeholder"></div>
+                    <h3>Bhagya</h3>
+                    <p class="role">Resource Management Specialist</p>
+                </div>
+                <!-- Thanuja -->
+                <div class="team-card">
+                    <div class="photo-placeholder"></div>
+                    <h3>Thanuja</h3>
+                    <p class="role">Closing Summarizer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Strategic Choice Section -->
+    <section id="choice" class="choice-section">
+        <div class="choice-content">
+            <h2 class="choice-title">The Strategic Choice</h2>
+            <p class="choice-statement">
+                "Recognizing the homemaker is not a step back, but a leap forward for society."
+            </p>
+            <div class="button-group">
+                <a href="#" class="btn-download">
+                    <span>📄</span> Download Full Report
+                </a>
+                <a href="#" class="btn-secondary">
+                    <span>📊</span> View Slides
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Team Mandila. All Rights Reserved.</p>
+            <p>Advocating for the Silent Pillars of Society.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
