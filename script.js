@@ -272,121 +272,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     clickableCards.forEach(card => {
-        // For the team card, we need to be careful not to trigger modal when clicking the upload label
-        card.addEventListener('click', (e) => {
-            // Prevent modal if clicking the upload label or input
-            if (e.target.closest('label') || e.target.closest('input')) {
-                return;
-            }
+        card.addEventListener('click', () => {
             openModal(card);
         });
     });
 
-    // --- Image Upload & Persistence Logic ---
-    const teamMembers = [
-        'mandila', 'aathif', 'adheeb', 'dahami', 'kavindya', 'khaliq',
-        'lahiru', 'oshadi', 'pawan', 'raini', 'sharuk', 'vihara', 'bhagya', 'thanuja'
-    ];
+    // --- Image Upload Logic Removed ---
 
-    function compressAndSaveImage(file, storageKey, previewId, placeholderId) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-            const img = new Image();
-            img.src = e.target.result;
-            img.onload = function () {
-                // Resize image to max 300x300 for storage efficiency
-                const canvas = document.createElement('canvas');
-                const ctx = canvas.getContext('2d');
-                const maxWidth = 300;
-                const maxHeight = 300;
-                let width = img.width;
-                let height = img.height;
-
-                if (width > height) {
-                    if (width > maxWidth) {
-                        height *= maxWidth / width;
-                        width = maxWidth;
-                    }
-                } else {
-                    if (height > maxHeight) {
-                        width *= maxHeight / height;
-                        height = maxHeight;
-                    }
-                }
-
-                canvas.width = width;
-                canvas.height = height;
-                ctx.drawImage(img, 0, 0, width, height);
-
-                // Compress image to JPEG at 70% quality
-                const dataUrl = canvas.toDataURL('image/jpeg', 0.7);
-
-                // Save to LocalStorage
-                try {
-                    localStorage.setItem(storageKey, dataUrl);
-
-                    // Update UI
-                    const preview = document.getElementById(previewId);
-                    const placeholder = document.getElementById(placeholderId);
-
-                    if (preview) {
-                        preview.src = dataUrl;
-                        preview.style.display = 'block';
-                    }
-                    if (placeholder) {
-                        placeholder.style.display = 'none';
-                    }
-                } catch (error) {
-                    console.error("Storage failed (likely quota exceeded):", error);
-                    alert("Image storage limit reached. Please remove some existing images or try smaller files.");
-                }
-            };
-        };
-        reader.readAsDataURL(file);
-    }
-
-    function loadSavedImages() {
-        teamMembers.forEach(member => {
-            const storageKey = `team_photo_${member}`;
-            const previewId = `${member}-photo-preview`;
-            // Mandila has a unique ID for the placeholder logic in the HTML
-            const placeholderId = member === 'mandila' ? 'placeholder-icon' : `${member}-placeholder-icon`;
-
-            const savedImage = localStorage.getItem(storageKey);
-            if (savedImage) {
-                const preview = document.getElementById(previewId);
-                const placeholder = document.getElementById(placeholderId);
-
-                if (preview) {
-                    preview.src = savedImage;
-                    preview.style.display = 'block';
-                }
-                if (placeholder) {
-                    placeholder.style.display = 'none';
-                }
-            }
-        });
-    }
-
-    // Initialize Event Listeners
-    teamMembers.forEach(member => {
-        const uploadId = `${member}-photo-upload`;
-        const previewId = `${member}-photo-preview`;
-        const placeholderId = member === 'mandila' ? 'placeholder-icon' : `${member}-placeholder-icon`;
-        const storageKey = `team_photo_${member}`;
-
-        const uploadInput = document.getElementById(uploadId);
-        if (uploadInput) {
-            uploadInput.addEventListener('change', function (e) {
-                if (e.target.files && e.target.files[0]) {
-                    compressAndSaveImage(e.target.files[0], storageKey, previewId, placeholderId);
-                }
-            });
-        }
-    });
-
-    // Load images on start
-    loadSavedImages();
 
     if (closeModal) {
         closeModal.addEventListener('click', closeModalFunction);
