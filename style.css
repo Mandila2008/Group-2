@@ -742,6 +742,25 @@ footer p {
     background-position: 10px 0, 10px 0, 0 0, 0 0;
     background-size: 20px 20px;
     background-repeat: repeat;
+    overflow: hidden;
+    /* Ensure image stays inside circle */
+    position: relative;
+}
+
+.upload-placeholder {
+    cursor: pointer;
+    transition: border-color 0.3s, opacity 0.3s;
+    z-index: 10;
+    /* Ensure it's clickable above the card */
+}
+
+.upload-placeholder:hover {
+    border-color: var(--primary-color);
+    opacity: 0.8;
+}
+
+.clickable-card {
+    cursor: pointer;
 }
 
 .team-card h3 {
